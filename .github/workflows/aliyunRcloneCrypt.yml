@@ -41,15 +41,11 @@ jobs:
       - name: 创建并激活虚拟环境
         run: bash -c "python -m venv venv && . venv/bin/activate"
 
-      - name: 检查虚拟环境
-        run: |
-          source venv/bin/activate
-          which pip
 
       - name: 安装所需要的Python信赖
         run: |
-          pip install --upgrade pip wheel
-          pip install requests
+          python -m pip install --upgrade pip wheel
+          python -m pip install requests
       - name: 下载
         id: downloading
         run: |
