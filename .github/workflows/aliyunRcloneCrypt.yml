@@ -38,6 +38,8 @@ jobs:
           python -m venv venv
           source venv/bin/activate
         shell: bash
+      - name: 创建并激活虚拟环境
+        run: bash -c "python -m venv venv && . venv/bin/activate"
 
       
       - name: 安装所需要的Python信赖
